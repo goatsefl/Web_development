@@ -10,11 +10,14 @@ according to the need.-->
 </head> <!-- This contains the document metadata, like css info and the utf type used.-->
 
 <body> <!--Contains the entire content of the page, the main body of the marked up page.-->
-    <h1>A Cackle Through Chicken History</h1>
-
-    <a href="http://gemini.google.com">Link to
-        source</a><!-- This is a reference tag/Anchor tag, inside the brackets, anything before assignment is an attribute-->
-    <a href="newPage.html">New Animal</a>
+    <div>
+        <h1>A Cackle Through Chicken History</h1>
+        <img src="Pictures/Naked-neck-chicken-Fig-2-Long-legged-chicken.png">
+        <!--Here, this is a tag used to showcase images, the alt attribute showcases if the image isn't loading or hovering about the image gives you the data of the image-->
+        <a href="http://gemini.google.com">Link to
+            source</a><!-- This is a reference tag/Anchor tag, inside the brackets, anything before assignment is an attribute-->
+        <a href="newPage.html">New Animal</a>
+    </div>
     <h2>From Jungle Fowl to Global Citizens with Feathers</h2>
     <p>The unassuming chicken, a constant presence in our farmyards and a delightful addition to many backyards, boasts
         a history as rich and fascinating as its plumage can be varied. Their journey from wild jungle fowl to the
@@ -72,21 +75,26 @@ according to the need.-->
         the world. </p>
 
 
-    <h3>Different Breeds</h3>
-    <!--<ul> is an unordered list and li is a list take, to use "li" we need a "ul" or "ol" tag-->
-    <!--ol is ordered list, instead of bullet points, you'll get numbers list in asceding order.-->
-    <ul>
-        <li> Bantam </li>
+    <div>
+        <!--This is content division element "<div>" which creates a block around the tags to be specified in a different class-->
+        <h3>Different Breeds</h3>
+        <!--<ul> is an unordered list and li is a list take, to use "li" we need a "ul" or "ol" tag-->
+        <!--ol is ordered list, instead of bullet points, you'll get numbers list in asceding order.-->
         <ul>
-            <li>Skinny</li>
-            <li>Polished</li>
+            <span>
+                <li> Bantam </li>
+            </span> <!-- This is span, unlike div, this will work for inline elements -->
+            <ul>
+                <li>Skinny</li>
+                <li>Polished</li>
+            </ul>
+            <li> Standard </li>
+            <ol>
+                <li>Village Chicken</li>
+                <li>Mountain Chicken</li>
+            </ol>
         </ul>
-        <li> Standard </li>
-        <ol>
-            <li>Village Chicken</li>
-            <li>Mountain Chicken</li>
-        </ol>
-    </ul>
+    </div>
 </body>
 
 </html>

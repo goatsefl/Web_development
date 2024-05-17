@@ -58,8 +58,14 @@ according to the need.-->
     <h2>Beyond the Farmyard: A Multifaceted Role in Our World</h2>
     <p>Chickens continue to play a vital role in our world today. They provide a sustainable source of protein and eggs
         for millions of people globally, particularly in developing countries. Beyond food production, chickens are kept
-        as beloved pets, used in scientific research to advance our understanding of biology, and even employed in
-        therapy programs, where their gentle nature can provide comfort and companionship.</p>
+        <br><br>
+        I've used 2 line breaks with this <"br"> tag.
+            as beloved pets, used in scientific research to advance our understanding of biology, and even employed in
+            therapy programs, where their gentle nature can provide comfort and companionship.
+            Two halfs make one i.e. <sup>1</sup>/<sub>2</sub> + <sup>1</sup>/<sub>2</sub> = 1.
+
+            <!--<sub> is a subscript and <sup> is a superscript-->
+    </p>
     <h2>A Look to the Future: Innovation and Sustainability</h2>
     <p>As technology advances and our understanding of genetics and animal husbandry deepens, the way we raise and
         interact with chickens is constantly evolving. Sustainable farming practices that prioritize animal welfare and
@@ -80,21 +86,87 @@ according to the need.-->
         <h3>Different Breeds</h3>
         <!--<ul> is an unordered list and li is a list take, to use "li" we need a "ul" or "ol" tag-->
         <!--ol is ordered list, instead of bullet points, you'll get numbers list in asceding order.-->
+        <hr> <!--Thematic break in html-->
+        <span>
+            <p>These chickens have varied prices, more currency means increased price.(Denoted using "&#x20B9;")</p>
+        </span>
         <ul>
             <span>
-                <li> Bantam </li>
-            </span> <!-- This is span, unlike div, this will work for inline elements -->
-            <ul>
-                <li>Skinny</li>
-                <li>Polished</li>
-            </ul>
-            <li> Standard </li>
-            <ol>
-                <li>Village Chicken</li>
-                <li>Mountain Chicken</li>
-            </ol>
+                <li> Bantam (Ranges from &#x20B9;-&#x20B9;&#x20B9;) </li>
+                <!--These are called as entities as they start with "&" and end with ";". Each entity has a different code for it to be showcased, for eg: INR code is #x20B9
+                    
+            </span>
+            <!-- This is span, unlike div, this is an inline elements to give specific shape or style certain element of the content-->
+                <ul>
+                    <li>Skinny</li>
+                    <li>Polished</li>
+                </ul>
+                <li> Standard (Ranges from &#x20B9;&#x20B9;-&#x20B9;&#x20B9;&#x20B9;)</li>
+                <ol>
+                    <li>Village Chicken</li>
+                    <li>Mountain Chicken</li>
+                </ol>
         </ul>
-    </div>
+    </div><!--To know more in detail about both div and span, you can inspect in the browser, and it will be visible--->
+
+    <h2>Semantic Markups</h2>
+    <p>Gives more meaning to the website, as all of the tags are used purposefully for the required actions.
+        Example :
+    <ul>
+        <li>
+            &lt;article&gt;
+        </li>
+        <li>
+            &lt;aside&gt;
+        </li>
+        <li>
+            &lt;details&gt;
+        </li>
+        <li>
+            &lt;caption&gt;
+        </li>
+        <li>
+            &lt;figure&gt;
+        </li>
+        <li>
+            &lt;footer&gt;
+        </li>
+        <li>
+            &lt;header&gt;
+        </li>
+        <li>
+            &lt;main&gt;
+        </li>
+        <li> &lt;mark&gt;
+        </li>
+        <li>
+            &lt;section&gt;
+        </li>
+        <li>
+            &lt;summary&gt;
+        </li>
+        <li>
+            &lt;time&gt;
+        </li>
+    </ul>
+    </p>
+    <a href="emmetCheatDemo.html">Emmet link
+    </a>
+    <br>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <td>ID</td>
+            <td>Full Name</td>
+            <td>Contact Number</td>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Shantanu</td>
+            <td>1828381828</td>
+        </tr>
+    </table>
 </body>
 
 </html>

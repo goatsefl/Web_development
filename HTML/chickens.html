@@ -159,29 +159,31 @@ according to the need.-->
         <!--Table tag which creates a table, under that <tr> implies table row, for each row, you can specify any number table data you require.
             <th> refers to table header where you can add header element for the for each row's table data, -->
         <tr>
-            <th>ID</th>
+            <th rowspan="2">ID</th>
             <th colspan="2">Name</th>
-            <th>Contact</th>
+            <th rowspan="2">Contact</th>
         </tr>
         <tr>
             <th>Surname</th>
-            <th>MiddleName</th>
+            <th>Middle Name</th>
         </tr>
         <tbody><!--<tbody> refers to the table body, which will encompass all the information below the <thead>.-->
             <tr>
                 <td>00</td>
-                <td>krishank</td>
+                <td>Sinha</td>
+                <td>Krishank</td>
                 <td>9293199231</td>
             </tr>
             <tr>
                 <td>01</td>
+                <td>Malik</td>
                 <td>Shantanu</td>
                 <td>1828381828</td>
             </tr>
         </tbody>
         <tfoot> <!--This will showcase the footer of the table for totals, tally or aggregates.-->
             <tr>
-                <th scope="row" colspan="2" align="justify">Total</th>
+                <th scope="row" colspan="3" align="justify">Total</th>
                 <!--Here the <th> has scope attribute which will show how it works, it can be row and rowgroup or col or colgroup.
                 the grouping implies the entire footer row or coloumn space will be the scope of the content.
                 colspan implies the amount of columns it will take i.e. 2 columns worth of space.  -->

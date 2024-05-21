@@ -18,7 +18,6 @@
         <li>The action attribute specifies where the data to be sent.</li>
         <li>The method attributes specifies which HTTP method to be used. </li>
     </ul>
-
     <h3>EXAMPLE FORM</h3>
     <form action="/sambhar"> <!--The input tag is a single tag element which takes care of the types of input a user provides,
     below are few types of input.-->
@@ -30,7 +29,7 @@
         <label for="col"></label>
         <input id="col" type="color">
         Choose number :
-        <label for="num">Number :</label>
+        <label for="num"></label>
         <input id="num" type="number" placeholder="Enter number">
         <p>
             <b>Placeholder</b> will give you addition information for the user to navigate and input the type of
@@ -41,10 +40,19 @@
             which will highlight a cursor. <br> (You can try clicking above on the above labels which require input, not
             on the box but, the text. Click on "Type any text" below to understand the difference.)<br>
         </p>
-        Type any text <br>
+        <b>Type any text</b> <br>
         <input type="text">
-        <p>This type of behaviour is useful on checkboxes.</p>
+        <p>This type of behaviour is useful on checkboxes, as involving labels will create better user experience.</p>
+        <p>The button below will take you to the directory mentioned in the <b>action</b> attribute inside form. <br>
+            Currently, in our case <b> Cannot GET /sambhar (ERROR 404)</b>, because, file under that directory doesn't
+            exist</p>
+        <button>Submit</button> <br>
     </form>
+    <p> To make it not go into another directory, we can use type = "submit" <b>inside button tag and outside the form
+            tag</b>.
+        Press the button below: <br>
+        <button type="submit">Submit</button>
+    </p>
 </body>
 
 </html>

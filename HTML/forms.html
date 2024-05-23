@@ -89,7 +89,25 @@
         <input type="radio" name="bird" id="sparrow" value="SPARROWBIRD">
         <label for="sparrow">Sparrow</label>
         <input type="radio" name="bird" id="pigeon" value="PIGEONBIRD">
-        <label for="pigeon">Pigeon</label>
+        <!--Attribute value shows the sent value to the backend and that value can be viewed in the browser url after submitting.-->
+        <label for="pigeon">Pigeon
+        </label><br><br><!--If none of the options are selected in radio, submitting the form will redirect to source provided in action. The source can be seen in the url after submitting. -->
+        <p>
+            <label for="meals">Please select the type of food you would like</label>
+            <select name="Rice dish" id="meals">
+                <!--This <select> opens up a drop down menu only if option tag is created, as shown below.-->
+                <option value="">-- Please select an Option --</option>
+                <option value="Biryani">Hyderabadi Biryani</option>
+                <option value="Fried-Rice">Fried-Rice</option>
+                <option value="Ema Datshi">Datshi Kawa</option>
+                <option value="Rice">Rice Pancake</option>
+            </select>
+        </p>
+        <p>
+            <label for=",ilk">Amount of Milk</label>
+            <input type="range" id="milk" min="0" max="200" name="milk-level">
+        </p>
+        <button>Submit</button><br>
     </form>
     </p>
 </body>

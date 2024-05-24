@@ -17,18 +17,19 @@
         <p>
             Select Race: <br>
             <br>
-            <input type="radio" id="fun" name="run" required>
+            <input type="radio" id="fun" name="run" value=" fun-run">
             <label for="fun">Fun Run 5k</label> <br>
-            <input type="radio" id="hmarathon" name="run" required>
+            <input type="radio" id="hmarathon" name="run" value="half-run">
             <label for="hmarathon">Half Marathon</label> <br>
-            <input type="radio" id="fmarathon" name="run" required>
+            <input type="radio" id="fmarathon" name="run" value="full-run">
             <label for="fmarathon">Full Marathon</label><br> <br>
             <label for="mail">Email</label>
             <input type="email" id="mail" required>
             <label for="password">Password</label>
             <input type="password" required id="password" minlength="8" maxlength="50"><br> <br>
             <label for="age">Select Age Group</label>
-            <select name="AGE_GROUP" id="age">
+            <select name="AGE_GROUP" id="age" required>
+                <!--This will create a drop down list of options to select.-->
                 <option value="Under-18">Under 18</option>
                 <option value="18-30">18-30</option>
                 <option value="30-50">30-50</option>

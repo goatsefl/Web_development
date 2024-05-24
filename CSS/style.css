@@ -3,17 +3,21 @@ h1 {
     text-align: left;
     /* Aligns the text to the prefered side*/
     /*This is going to change the color of the HTML h1 content to blue.*/
-    text-decoration: goldenrod overline dotted;
+    /* text-decoration: goldenrod overline dotted; */
     text-decoration: skyblue underline wavy;
-    /* whatever is executed at the end for text-decoration will be compiled. text-decoration has 3 attributes : color, type of underline: underline, overline and line-through. The last attribute being the type of how the underline should look */
+    /* Only the last text-decoration line will be compiled, text-decoration has 3 attributes : color, type of underline: underline, overline and line-through. The last attribute being the type of how the underline should look */
     letter-spacing: 6px;
+    /* text-declaration can also remove underline of existing by simple using "none" */
+    font-size: 80px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    /* font-family is a property where you can choose the type of font to be used. The commas after the first font creates a backup for using other generic fonts if the listed one don't exist. */
 }
 
 h2 {
     color: aquamarine;
     background-color: chocolate;
     text-align: center;
-
     /*This is a hexadecimal number, after 0-9 digits, A,B,C,D,E and F are the remaining 6. We can define a color using either RGB or hexadecimal both do the same work.*/
     /*It's a block element, so the BG-color is going to span till the end of line,
     very unpleasant visual. */
@@ -26,11 +30,18 @@ button {
 
 p {
     color: yellow;
-    font-weight: 900;
-    line-height: 4;
+    font-weight: 500;
+    /* font-weight provides the strength of the letter whether it's bold or light, it can be represented from 100-900.(100 least weight,900 boldest) */
+    line-height: 1.5;
+    /* line-height describes the height between each line, 0 value with the lowest space till n range. */
 }
 
 body {
     background-color: crimson;
     font-weight: 300;
+}
+
+a {
+    text-decoration: none;
+    /* the above property will remove the underline of any text which has an underline. */
 }

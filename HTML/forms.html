@@ -29,7 +29,7 @@
         <input id="col" type="color" name="color">
         <!--name attribute inside input tag will send the data to server to search queries, look for any data related to provided data by users, it is useful when using forms..-->
         <label for="num">Choose number :</label>
-        <input id="num" type="number" placeholder="Enter number" name="number"> <br>
+        <input id="num" type="number" placeholder="Enter number" step="3" min="1" max="1999" name="number"> <br>
         <button>Submit</button> <br>
         <p>
             <b>Placeholder</b> will give you addition information for the user to navigate and input the type of
@@ -105,11 +105,18 @@
         </p>
         <p>
             <label for=",ilk">Amount of Milk</label>
-            <input type="range" id="milk" min="0" max="200" name="milk-level">
+            <input type="range" id="milk" min="0" max="20" value="12.5" name="milk-level">
+            <!--value here determines the default value of the range.-->
+        </p>
+        <p>
+            <label for="texts">Write your feedback</label> <br>
+            <textarea name="input_feedback" id="texts" placeholder="Tell us your experience..." rows="10"
+                cols="50"></textarea>
         </p>
         <button>Submit</button><br>
     </form>
     </p>
+    <h2>Validations Demo</h2>
 </body>
 
 </html>

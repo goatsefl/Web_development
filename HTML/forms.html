@@ -117,6 +117,18 @@
     </form>
     </p>
     <h2>Validations Demo</h2>
+    <form action="/validations">
+        <label for="first">Enter First Name</label>
+        <p>
+            <label for="first">Username</label>
+            <input type="text" name="username" id="first" minlength="6" maxlength="12">
+            <!--We can use some restrictions in the input-->
+        </p>
+        <input type="text" name="first" id="first" required>
+        <button type="submit">Submit</button>
+        <!--required attribute asks the user to fill the given input or it won't be able to send request by submitting. 
+        If no input is detected, will hover a message with an exclamation saying "Please fill in this field.".-->
+    </form>
 </body>
 
 </html>

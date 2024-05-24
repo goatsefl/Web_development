@@ -1,0 +1,36 @@
+h1 {
+    color: greenyellow;
+    text-align: left;
+    /* Aligns the text to the prefered side*/
+    /*This is going to change the color of the HTML h1 content to blue.*/
+    text-decoration: goldenrod overline dotted;
+    text-decoration: skyblue underline wavy;
+    /* whatever is executed at the end for text-decoration will be compiled. text-decoration has 3 attributes : color, type of underline: underline, overline and line-through. The last attribute being the type of how the underline should look */
+    letter-spacing: 6px;
+}
+
+h2 {
+    color: aquamarine;
+    background-color: chocolate;
+    text-align: center;
+
+    /*This is a hexadecimal number, after 0-9 digits, A,B,C,D,E and F are the remaining 6. We can define a color using either RGB or hexadecimal both do the same work.*/
+    /*It's a block element, so the BG-color is going to span till the end of line,
+    very unpleasant visual. */
+}
+
+button {
+    color: greenyellow;
+    background-color: black;
+}
+
+p {
+    color: yellow;
+    font-weight: 900;
+    line-height: 4;
+}
+
+body {
+    background-color: crimson;
+    font-weight: 300;
+}

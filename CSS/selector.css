@@ -1,0 +1,27 @@
+* {
+    color: darkgreen;
+    background-color: beige;
+}
+
+/* A universal selector will select the entire page and apply the properties, "*" is the universal selector and using any property will be applied throughout the page.*/
+/* The above selection will make page text to be entirely pink. */
+
+h1,
+h2 {
+    /* User can select multiple tags at once in the selector area to apply provided tags with required properties,
+    in this example i'm making all the tags weight to be 100 */
+    font-weight: 100;
+}
+
+button {
+    font-size: 30px;
+    /* increases the button size to 30px size. */
+}
+
+/* To have specificity in terms of not selecting all the buttons, or elements, we can use unique selector.
+id is a unique selector, where in we can use it on any element but, the naming should be unique, syntax is given below. */
+#signup {
+    color: darkgreen;
+    background-color: lightgreen;
+    font-size: 22px;
+}

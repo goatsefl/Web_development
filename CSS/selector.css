@@ -25,3 +25,81 @@ id is a unique selector, where in we can use it on any element but, the naming s
     background-color: lightgreen;
     font-size: 22px;
 }
+
+/*The below selector is for class, as unique selector will be only at numbered places in a page, for most of the scenarios we use classes.
+They are defined by "." followed by class name, "flairs" is the classname for the span element in starter.html */
+.flairs {
+    color: yellowgreen;
+    background-color: blueviolet;
+    font-size: small;
+    font-weight: 800;
+}
+
+/*There are descendant selectors, if the user want to select nested tags from a group of parent tags i.e. 
+PARENT_TAG DESCENDANT_TAG {property : value;}, the syntax here involves the "space" between PARENT_TAG "space" DESCENDANT_TAG.*/
+
+span a {
+    color: peachpuff;
+    background-color: green;
+}
+
+/* The selector can be used in combination with class selector, i.e. .class_selector(PARENT_TAG) descendant_tag. */
+.floaters a {
+    color: darksalmon;
+    background-color: grey;
+}
+
+/* Adjacent Selector and Direct child selector are 2 such selectors that require operators like "+" and ">" between selection of tags to work.*/
+
+/* Adjacent Selector : Anything that appears after the operator(+) will be the primary focus of provided properties, if the preceding "tag,id or class" before operator(+) is appeared.
+Example : */
+/* This will make every <button> use these properties, after every <h2> tag. It's more of a follow-up tag in real-life scenario.*/
+h2+button {
+    color: chartreuse;
+    font-size: large;
+}
+
+/* Direct Child Selector will select the direct child of the parent tag and those tag/tags will be in direct of the provided properties below. */
+/* greater than a, in starter.html Exotic is the parent id and a is the direct child*/
+#Exotic>a {
+    text-decoration: underline wavy chocolate !important;
+    font-size: 50px !important;
+    background-color: darkred !important;
+    color: beige !important;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
+}
+
+/* In the above values, !important is one of the values that will override all the tag properties and prioritize to the current selector.*
+
+/* Attribute Selector is by name implies, selects the attribute of a tag for extensive styling properties.*/
+/* Example: Attribute of input are being selected to be styled.*/
+
+
+nav+input[type="text"] {
+    color: greenyellow;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav+input[type="password"] {
+    color: purple;
+    font-size: large;
+}
+
+/* Pseudo Classes : Keyword added to a selector that specifies a special state of the selected element(s). */
+/*Selector: keyword */
+button:hover {
+    color: whitesmoke;
+    background-color: saddlebrown;
+}
+
+/* hover works when you hover the mouse on the specified selector */
+button:active {
+    color: black;
+    background-color: aqua;
+}
+
+/* active works when the specified element is clicked with mouse (or) spacebar.*/
+section[class="post"] {
+    background: #edf2f4;
+}

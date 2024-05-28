@@ -41,6 +41,7 @@ PARENT_TAG DESCENDANT_TAG {property : value;}, the syntax here involves the "spa
 span a {
     color: peachpuff;
     background-color: green;
+    text-decoration: none;
 }
 
 /* The selector can be used in combination with class selector, i.e. .class_selector(PARENT_TAG) descendant_tag. */
@@ -93,6 +94,14 @@ button:hover {
     background-color: saddlebrown;
 }
 
+/* List of Pseudo Classes :active,
+ checked,
+ first,
+ first-child,
+ hover,
+ not(),
+ nth-child(),
+ nth-of-type() */
 /* hover works when you hover the mouse on the specified selector */
 button:active {
     color: black;
@@ -100,6 +109,28 @@ button:active {
 }
 
 /* active works when the specified element is clicked with mouse (or) spacebar.*/
+/* keyword is searching the attribute with class  = post, in this case, it needs to be matching(Case_sensitive).*/
 section[class="post"] {
     background: #edf2f4;
+}
+
+a[href="youtube"] {
+    font-size: small !important;
+    background-color: #ffafcc !important;
+    color: #fb8500 !important;
+}
+
+.post button:hover {
+    color: whitesmoke;
+    background-color: saddlebrown;
+}
+
+.post {
+    background-color: #f5ebe0;
+}
+
+/* The nth-of-type selects for every post we are making the background color change for every 3rd post in the example below,
+if needed, we can use a literal number, which will only highlight the 3rd(if nth-of-type(3)) section only. N will consider the entirety of .post.*/
+.post:nth-of-type(n) {
+    background-color: #f7ede2;
 }

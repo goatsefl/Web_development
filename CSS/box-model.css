@@ -1,0 +1,103 @@
+/* Box-Model contains 3 important measures:
+Padding 1, closest to content box.
+Border 2, closest to padding.
+Margin 3, closest to border. 
+ */
+
+/* Width and height control the content box's size, here the box-content has same width and size. */
+/* By default body margin will be set to 8 */
+body {
+    margin: 0;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    /* background-color: #7bf1a8; */
+}
+
+h1 {
+    background-color: pink;
+    width: 200px;
+    padding-left: 100px;
+    padding-top: 50px;
+    margin: 10px;
+}
+
+/*
+Border controls the border of the box, most used properties are 
+border-width : Control the thickness of the border.
+border-color : Set the color of the border.
+border-style : Set different styles of border.
+<---------------------------------------------------->
+Usage of right border technique:
+-------------------------------
+If border-sizing isn't used, the border-width will increase the size of the box changing the original box size.
+With border-sizing the box remains same, the margin will increase inward by squeezing the content.
+*/
+
+#one {
+    background-color: #7bf1a8aa;
+    /* border-width: 3px; */
+    border-color: rgb(139, 178, 255);
+    border-style: solid;
+    margin: 10px;
+    /* box-sizing: border-box; */
+}
+
+#two {
+    background-color: #3b8a59;
+    /* border-width: 3px; */
+    border-color: rgb(99, 61, 0);
+    border-style: dashed;
+    margin: 10px;
+}
+
+/* 
+Using a single element like border can select all elements at once { width : style : color }. 
+
+For granularity the border-style gives more control, example : {up :solid; right :solid; down :dotted; left:dashed;} can be styled.
+
+These styles can be applied individually to each side of an element's border (top, right, bottom, left) to create a variety of visual effects.
+
+border-radius: Makes the borders a bit smoothened in terms, can control all the borders just like border-style, making the border change shape with border radius.*/
+
+#three {
+    background-color: #1f452daa;
+    border-width: 3px;
+    border-color: rgb(255, 162, 0);
+    border-style: solid none none dashed;
+    border: 3px solid blueviolet;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+/* Padding is the space between content and the border, which can be useful for making space for content to make visual enhancements.
+    General Padding property , padding : {top;right;bottom;left}(clockwise).
+    if padding : x% y% (vertical : horizontal) both sides in horizontal will be applied y% and vice versa for vertical.
+    Example below:
+    Funny meaning : layer of fat between muscle and skin i.e. Spacing on the inside of the border.
+*/
+button {
+    padding: 20px 10px;
+    padding: 12px 24px 36px 48px;
+    padding: 10px;
+    margin: 10px;
+    /*Uniform adjustment of 10px from all sides.*/
+}
+
+/* Margin is the spacing i.e. outside the border. Incrases the space around the content box by certain pixels, percentage or any other metric.*/
+
+h2 {
+    background-color: lightgoldenrodyellow;
+    border: 2px solid black;
+    margin: 200px;
+    /*Here in this example the margin of h2 element is 200px added from all sides,*/
+}
+
+span {
+    background-color: lightyellow;
+    border: 2px dotted red;
+    margin: 250px;
+}

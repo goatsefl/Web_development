@@ -1,3 +1,9 @@
+/* Specificity in css refers to the precedence and importance given to certain attributes.
+Highest precedence =  ID
+Mid level = Class
+Low level = elements
+
+Also in terms of cascading, if both the elements are of same precedence that last used will cascade the previously given property.*/
 * {
     color: darkgreen;
     background-color: beige;
@@ -133,4 +139,25 @@ a[href="youtube"] {
 if needed, we can use a literal number, which will only highlight the 3rd(if nth-of-type(3)) section only. N will consider the entirety of .post.*/
 .post:nth-of-type(n) {
     background-color: #f7ede2;
+}
+
+
+/* Pseudo Elements : Keywords added to a selector that lets you style a particular part of selected element(s). */
+/* Usage : selector :: keyword (You can use a sinlge colon to use the element, but it's good practise to differentiate between 2 different )*/
+/* first letter of every H2 will inherit those properties. */
+h2::first-letter {
+    font-size: larger;
+    color: #05008d8e;
+    font-weight: 800;
+}
+
+/* first-line of every paragraph will inherit those properties. */
+p::first-line {
+    color: darkcyan;
+    font-weight: 600;
+}
+
+/* selection inside the paragraph when clicked and selected certain elements inside the paragraph will provide visual to be orangered. */
+p::selection {
+    background-color: orangered;
 }

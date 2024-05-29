@@ -2,8 +2,39 @@
 Highest precedence =  ID
 Mid level = Class
 Low level = elements
+Usage of !important, need to be restricted.
+!important will override any selector and apply it to over other speficity rules. 
 
-Also in terms of cascading, if both the elements are of same precedence that last used will cascade the previously given property.*/
+Also in terms of cascading, if both the elements are of same precedence, last applied property of the same element will cascade the previously given property, this works in how the call to .css file made in your html file as well.*/
+
+/* Inheritance : When no value for an inherited property has been specified on an element,
+ the element gets the computed value of that property on its parent element.
+Only the root element of the document gets the initial value given in the property's summary.
+EG:CSS file
+ p {
+  color: green;
+}
+HTML FILE
+<p>This paragraph has <em>emphasized text</em> in it.</p>
+Result will print the entire paragraph green, even the emphasized text under the paragraph.
+<-------------------------------------------------------------------------------------------------------------------------> 
+<-------------------------------------------------------------------------------------------------------------------------> 
+<-------------------------------------------------------------------------------------------------------------------------> 
+Non-inheritance:
+When no value for a non-inherited property has been specified on an element,
+the element gets the initial value of that property (as specified in the property's summary).
+EG: CSS file 
+ p {
+  border: medium solid;
+}
+HTML file
+<p>This paragraph has <em>emphasized text</em> in it.</p>
+Result will print the border only for paragraph, not the em element. 
+These wasn't inherited property unlike color, border property didn't get applied.
+*/
+
+
+
 * {
     color: darkgreen;
     background-color: beige;

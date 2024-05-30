@@ -93,11 +93,21 @@ h2 {
     background-color: lightgoldenrodyellow;
     border: 2px solid black;
     margin: 200px;
+    display: inline;
+    /*Here the element is block, but, using display we changed the value of the h2 to inline.*/
     /*Here in this example the margin of h2 element is 200px added from all sides,*/
 }
 
 span {
+    height: 150%;
+    width: 100%;
     background-color: lightyellow;
     border: 2px dotted red;
-    margin: 250px;
+    padding: 40% 40%;
+    margin: 200px 100px;
+    /*In this value, the size of the span will not have margins for the top and bottom increased, as span as inline element. */
+    text-align: center;
+    display: block;
+    /*This property can make an element from inline to block and vice versa.
+    Check the usage with commenting out.*/
 }

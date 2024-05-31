@@ -104,10 +104,99 @@ span {
     background-color: lightyellow;
     border: 2px dotted red;
     padding: 40% 40%;
+    /*
+    Percentages are relative to box-content if it's in the context of box-model, 
+    it will depend on the height and width of the box-content.
+    Padding in our case cannot converge vertically instead margin can.
+    */
     margin: 200px 100px;
     /*In this value, the size of the span will not have margins for the top and bottom increased, as span as inline element. */
     text-align: center;
     display: block;
     /*This property can make an element from inline to block and vice versa.
     Check the usage with commenting out.*/
+}
+
+/* Percentages are relative to either the parent or the element itself.*/
+
+
+section {
+    height: 800px;
+    width: 800px;
+    background-color: #00bfff;
+    margin-bottom: 10%;
+}
+
+section>div {
+    height: 75%;
+    width: 75%;
+    background-color: lightgreen;
+    margin: 168.5px 0% 0% 0%;
+}
+
+
+section p {
+    margin: 0 0 0 90%;
+    text-align: right;
+    color: black;
+    font-size: 150%;
+    font-weight: 600;
+    border: 2px dashed black;
+}
+
+section div p {
+    margin: 0 0 0 91.5%;
+    display: inline;
+    text-align: right;
+    color: black;
+    font-size: 150%;
+    font-weight: 600;
+    border: 2px dashed black;
+}
+
+/* 
+Relative measurement is often used in em's and rem's, em's are common multiplier of parent elements or sometimes the element itself.
+Whereas, rem's are root element multipliers. Both em's and rem's are used in different ways.  
+ */
+/* Advantage */
+/* 
+All the buttons will be a multiplier of the font size of the parent element. Scaling happens in relative to the parent element.
+That makes the buttons below in .united scale well and the border-radius need not be adjusted for different sizes of button.
+*/
+
+.united {
+    background-color: azure;
+    font-size: 2em;
+    border-radius: 1.5em;
+    border-color: black;
+}
+
+/* Disadvantage of em, if there is a nesting in terms of elements, if the scaling is less than 1em.
+then every time it will be < 1 times multiplier of parent element.
+ */
+#emunits {
+    font-size: 10px;
+}
+
+/* 
+As it nests down, the font will be increased by 1.5 times with given properties of #units and ul.
+Compounding is one of the major downsides of the em when nested, to solve this we rem's.
+--> 10px * 1.5 = (result)
+--> (result.prev) * 1.5  = (result.next)
+--> (result.prev) * 1.5....
+ */
+#emunits li {
+    font-size: 1.5em;
+}
+
+/* 
+rem ; root em's, which in general have single root as a relative unit and won't compound on nesting.
+below is the comparision of the scaling 
+*/
+#remunits {
+    font-size: 5px;
+}
+
+#remunits li {
+    font-size: 1.5rem;
 }

@@ -1,0 +1,55 @@
+section {
+    height: 500px;
+    width: 500px;
+    background-color: greenyellow;
+}
+
+/* Opacity : Affects the entire block of section making the contents transparent too.*/
+
+#opacity {
+    height: 50%;
+    width: 50%;
+    background-color: brown;
+    opacity: 40%;
+}
+
+/* RGBA - Color with Alpha, in this alpha refers to the transparency of the background-color only,
+ so, for more granularity. We can use alpha in this way by changing the value 0 to 1.*/
+#rgba {
+    height: 50%;
+    width: 50%;
+    background-color: rgba(132, 0, 255, 0.4);
+}
+
+p {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: 3px solid black;
+    margin: 20px;
+}
+
+#static {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 3px solid black;
+    margin: 20px;
+    position: static;
+    /*Static is a position which will follow the document flow, can't change anything due to it's static property.*/
+    left: 30%;
+}
+
+#relative {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    border: 3px solid black;
+    margin: 20px;
+    position: relative;
+    /*Box position is in normal flow and the position if shifted will be from it's relative positioning.*/
+    top: 100px;
+}

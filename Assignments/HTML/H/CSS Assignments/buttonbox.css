@@ -1,24 +1,26 @@
 body {
-    background-color: black;
+    background-color: rgb(11, 1, 42);
 }
 
 button {
-    color: yellow;
-    background-color: black;
+    color: rgba(255, 255, 1, 1);
+    background-color: rgba(16, 3, 60, 0.3);
     display: block;
     position: absolute;
-    right: 50%;
-    bottom: 45%;
-    font-size: 40px;
-    border: 1px solid white;
-    box-shadow: 1px 1px 1px 1px white;
-    border-radius: 10%;
-    transition: transform .5s, color .5s, box-shadow .5s, border-color .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding: 10px 60px;
+    text-align: center;
+    margin: 30px;
+    right: 45%;
+    bottom: 40%;
+    font-size: 20px;
+    border: 3px solid rgb(255, 128, 0);
+    box-shadow: 1px 0px 1px 1px rgb(255, 111, 0);
+    transition: transform .5s, color .5s, box-shadow .5s, border-color .3s ease-in-out;
 }
 
 button:hover {
-    box-shadow: 0px 5px 5px 5px yellow;
+    box-shadow: 10px 3px 3px 3px rgba(255, 255, 1, 0.666);
     color: white;
-    transform: translate(50px, -100px) rotate(180deg);
-    border-color: yellow;
+    transform: translate(10px, -15px) skew(-3deg, -2deg);
+    border: 3px solid yellow;
 }

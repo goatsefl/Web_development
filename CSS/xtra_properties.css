@@ -86,7 +86,7 @@ p {
 
 /* 
 Fixed is yet another position which fixes the element in certain position on the webpage, used mainly for nav bars,
-used for continuously acessed elements that need to remain on the screen. 
+used for constantly acessed elements that need to remain on the screen. 
 */
 
 #fixed {
@@ -96,6 +96,85 @@ used for continuously acessed elements that need to remain on the screen.
     background-color: red;
     border: 3px solid black;
     margin: 20px;
-    position: fixed;
-    left: 100px;
+    position: relative;
+    /*Change this to fixed for understanding */
+    bottom: 1px;
+}
+
+.Transitions p {
+    height: 150px;
+    width: 150px;
+    background-color: chocolate;
+    transition: background-color 0.5s, border-radius 0.3s;
+}
+
+/* Transition and their properties : 
+    (Property Name, Duration, Timing Function, Delay)
+    these are different parameters you can choose from when using transition property.
+    Timing function defines the way how the delay works, i.e. the delay can work instantaneously in a single stroke OR
+    the delay can start slow and end fast. It'll be easier to create an example below.
+*/
+
+.Transitions p:hover {
+    background-color: aqua;
+    border-radius: 50%;
+}
+
+.TimeF {
+    height: 300px;
+    width: 300px;
+}
+
+.TimeF div {
+    box-sizing: border-box;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin-bottom: 2px;
+    background-color: blue;
+    transition: margin-left 2s border-radius 2s background-color 2s;
+}
+
+.TimeF:hover div {
+    position: relative;
+    border-radius: 50%;
+    margin-bottom: 2px;
+    height: 25px;
+    width: 25px;
+    margin-left: 300px;
+    border: 1px solid black;
+}
+
+.TimeF div:nth-of-type(1) {
+    background-color: chartreuse;
+    transition: 1s ease-in, background-color 1s;
+}
+
+.TimeF div:nth-of-type(2) {
+    background-color: goldenrod;
+    transition: 1s ease-out, background-color 1s;
+}
+
+.TimeF div:nth-of-type(3) {
+    background-color: palevioletred;
+    transition: 1s ease-in-out, background-color 1s;
+}
+
+.TimeF div:nth-of-type(4) {
+    background-color: chocolate;
+    transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), background-color 1s;
+}
+
+.TimeF div:nth-of-type(5) {
+    background-color: darkolivegreen;
+    transition: 1s cubic-bezier(0.19, 1, 0.22, 1), background-color 1s;
+}
+
+/* 
+There are different types of transitions, you can specify what property to transition, 
+and the delay for that property in the transition itself.
+*/
+.TimeF:hover div {
+    background-color: aquamarine;
 }

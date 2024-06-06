@@ -23,4 +23,5 @@ button:hover {
     color: white;
     transform: translate(10px, -15px) skew(-3deg, -2deg);
     border: 3px solid yellow;
+    cursor: pointer;
 }

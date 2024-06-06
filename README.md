@@ -1,2 +1,2 @@
 # Web_development
-Learning through the eyes of dificulty.
+Learning through the eyes of difficulty.

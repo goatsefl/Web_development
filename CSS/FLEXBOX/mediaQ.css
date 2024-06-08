@@ -1,0 +1,33 @@
+/* 
+
+The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries.
+With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+*/
+
+h2{
+    color: hwb(0 83% 17% / 0.041);
+    font-size: 40px;
+    text-align: center;
+    position: relative;
+    top:250px;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    height: 400px;
+    background-color: black;
+}
+
+@media(max-width : 600px){
+    h1{
+        font-size: 10px;
+        color: brown;
+        text-align: center;
+        position: relative;
+        top: 50%;
+        left:35%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body{
+        background-color: white;
+    }
+}

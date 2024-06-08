@@ -1,0 +1,110 @@
+/* 
+Positional alignment 
+justify-content: center; Pack items around the center 
+justify-content: start; Pack items from the start 
+justify-content: end;   Pack items from the end 
+justify-content: flex-start;  Pack flex items from the start 
+justify-content: flex-end;  Pack flex items from the end 
+justify-content: left;  Pack items from the left 
+justify-content: right;  Pack items from the right 
+
+Baseline alignment 
+justify-content does not take baseline values 
+
+Normal alignment
+justify-content: normal;
+
+Distributed alignment
+justify-content: space-between; 
+Distribute items evenly
+The first item is flush with the start,
+the last is flush with the end 
+justify-content: space-around;  Distribute items evenly
+Start and end gaps are half the size of the space
+between each item 
+justify-content: space-evenly;  Distribute items evenly
+Start, in-between, and end gaps have equal sizes 
+justify-content: stretch;  Distribute items evenly
+Stretch 'auto'-sized items to fit
+the container 
+
+Overflow alignment 
+justify-content: safe center;
+justify-content: unsafe center;
+
+Global values
+justify-content: inherit;
+justify-content: initial;
+justify-content: revert;
+justify-content: revert-layer;
+justify-content: unset;
+*/
+
+/* The element behaves like a block-level element and lays out its content according to the flexbox model. */
+h1{
+    width: 90%;
+    text-align: center;
+    font-weight: 300;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#container{
+    /* height: 500px; */
+    background-color: #020037;
+    width: 90%;
+    margin : 0 auto;
+    border: 5px solid #280587;
+    display: flex;
+    /* flex-direction: column;
+    justify-content: end;
+    justify-content: start;
+    justify-content: space-around;
+    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: unset ;  */
+    flex-direction:row;
+    justify-content:center;
+    /* align-items:flex-start; */
+    /* flex-wrap: wrap; */
+    /* align-content:center; */
+}
+
+/* The CSS justify-content property defines how the browser distributes space between and around content items along the main-axis of a flex container, 
+and the inline axis of a grid container. */
+/* The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed). */
+#container div{
+    height: 165px;
+    width: 165px;
+    text-align: center;
+    flex-basis: 555px;
+}
+/*
+Usually, used in terms of single element wrapping.
+*/ 
+div:nth-of-type(1){
+    /* align-self: flex-end; */
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+div:nth-of-type(5){
+    /* align-self: center; */
+    flex-grow: 2;
+    flex-shrink: 2;
+} 
+
+main{
+    width: 80%;
+    height: 500px;
+    border: 5px solid black;
+    margin: 0 auto;
+    display: flex;
+}
+main .sidebar{
+    background-color:blueviolet;
+    flex:1 2 300px ; /*Short Hand notation for shrink, grow and flex-basis*/
+}
+
+main .maincontent{
+    background-color: aqua;
+    flex: 2 1 600px;
+}

@@ -2,6 +2,8 @@
 
 The @media CSS at-rule can be used to apply part of a style sheet based on the result of one or more media queries.
 With it, you specify a media query and a block of CSS to apply to the document if and only if the media query matches the device on which the content is being used.
+
+Media queries can be used extensively as a condition keeping paradigm for better control on usability.
 */
 
 h2{

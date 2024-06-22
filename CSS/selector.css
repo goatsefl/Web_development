@@ -64,7 +64,7 @@ id is a unique selector, where in we can use it on any element but, the naming s
 }
 
 /*The below selector is for class, as unique selector will be only at numbered places in a page, for most of the scenarios we use classes.
-They are defined by "." followed by class name, "flairs" is the classname for the span element in starter.html */
+They are defined by "." followed by class name, "flairs" is the class-name for the span element in starter.html */
 .flairs {
     color: yellowgreen;
     background-color: blueviolet;
@@ -145,7 +145,7 @@ button:active {
     background-color: aqua;
 }
 
-/* active works when the specified element is clicked with mouse (or) spacebar.*/
+/* active works when the specified element is clicked with mouse (or) space-bar.*/
 /* keyword is searching the attribute with class  = post, in this case, it needs to be matching(Case_sensitive).*/
 section[class="post"] {
     background: #edf2f4;
@@ -174,7 +174,7 @@ if needed, we can use a literal number, which will only highlight the 3rd(if nth
 
 
 /* Pseudo Elements : Keywords added to a selector that lets you style a particular part of selected element(s). */
-/* Usage : selector :: keyword (You can use a sinlge colon to use the element, but it's good practise to differentiate between 2 different )*/
+/* Usage : selector :: keyword (You can use a single colon to use the element, but it's good practise to differentiate between 2 different )*/
 /* first letter of every H2 will inherit those properties. */
 h2::first-letter {
     font-size: larger;

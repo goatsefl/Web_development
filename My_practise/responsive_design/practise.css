@@ -1,0 +1,66 @@
+* {
+  background-color: #8bffff7d;
+}
+
+.alignment {
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: #c6ffff;
+}
+nav {
+  width: 50%;
+  display: flex;
+  padding: 10px 5px;
+  flex-direction: row;
+  border: 2px solid black;
+  justify-content: space-around;
+  flex-wrap: wrap-reverse;
+  background-color: white;
+  transition: all 1s cubic-bezier(0.5, 0.5, 0.5, 1);
+}
+nav:hover {
+  box-shadow: 0px 0px 5px 10px rgba(172, 255, 47, 0.7);
+  text-shadow: 1px;
+  transform-origin: bottom;
+  transform: translateX(-5px) translateY(10px) scale(1, -2);
+  border: 1px solid yellow;
+  background-color: black;
+  color: darkblue;
+}
+a {
+  font-size: 14px;
+  font-weight: 100;
+  font-family: comic-sans;
+  padding: 6px 6px;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  transition: all 0.35s ease-in-out;
+}
+a:hover {
+  font-size: 16px;
+  background-color: greenyellow;
+  transform: scaleX(1px) scaleY(1px);
+  box-shadow: 4px 2px 3px lightgray;
+  color: darkblue;
+}
+/* .prod :hover {
+  background-color: #007bff;
+  color: white;
+}
+.sign :hover {
+  background-color: #ffc107;
+  color: black;
+}
+.about:hover {
+  background-color: rgba(0, 0, 139, 0.455);
+}
+.contact:hover {
+  background-color: darkgrey;
+  color: black;
+}
+.career :hover {
+  background-color: rgba(0, 128, 0, 0.6);
+  color: white;
+} */

@@ -1,32 +1,35 @@
 * {
-  background-color: #8bffff7d;
+  background-color: #8cffff7d;
 }
 
 .alignment {
   padding-bottom: 25px;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   background-color: #c6ffff;
 }
 nav {
-  width: 50%;
+  width: 648px;
   display: flex;
   padding: 10px 5px;
   flex-direction: row;
-  border: 2px solid black;
-  justify-content: space-around;
-  flex-wrap: wrap-reverse;
+  border: 1px solid whitesmoke;
+  box-shadow: 0px 0px 1px 2px greenyellow;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: white;
-  transition: all 1s cubic-bezier(0.5, 0.5, 0.5, 1);
+  transition: all 0.4s cubic-bezier(0.5, 0.5, 0.5, 1);
+  border-radius: 5px;
 }
 nav:hover {
-  box-shadow: 0px 0px 5px 10px rgba(172, 255, 47, 0.7);
+  box-shadow: 0px 0px 1.5px 2.5px greenyellow;
   text-shadow: 1px;
   transform-origin: bottom;
-  transform: translateX(-5px) translateY(10px) scale(1, -2);
+  transform: translateX(-5px) translateY(5px);
   border: 1px solid yellow;
-  background-color: black;
+  background-color: whitesmoke;
   color: darkblue;
+  border-radius: 10px;
 }
 a {
   font-size: 14px;
@@ -34,33 +37,49 @@ a {
   font-family: comic-sans;
   padding: 6px 6px;
   text-decoration: none;
-  background-color: white;
-  color: black;
+  background-color: whitesmoke;
+  color: darkslategrey;
   transition: all 0.35s ease-in-out;
+  border-radius: 5px;
 }
 a:hover {
   font-size: 16px;
-  background-color: greenyellow;
+  background-color: black;
   transform: scaleX(1px) scaleY(1px);
-  box-shadow: 4px 2px 3px lightgray;
-  color: darkblue;
+  box-shadow: 0px 0px 3px 2px greenyellow;
+  color: greenyellow;
+  border-radius: 10px;
+  border: 1px solid yellow;
 }
-/* .prod :hover {
-  background-color: #007bff;
-  color: white;
+
+@media (max-width: 768px) {
+  nav div {
+    height: fit-content;
+  }
+  nav {
+    width: 150px;
+    height: 200px;
+    background-color: rgb(255, 255, 255, 1);
+    align-content: space-around;
+  }
+  a {
+    background-color: whitesmoke;
+    color: darkslategrey;
+  }
+  nav:hover {
+    box-shadow: 0px 0px 5px 5px greenyellow;
+    background-color: whitesmoke;
+    transform: translateY(-1px);
+  }
+  a:hover {
+    background-color: black;
+    box-shadow: 0px 0px 3px 2px greenyellow;
+    color: greenyellow;
+    font-size: 16px;
+  }
+  .alignment {
+    padding: 15px 0px;
+    justify-content: center;
+    align-content: space-evenly;
+  }
 }
-.sign :hover {
-  background-color: #ffc107;
-  color: black;
-}
-.about:hover {
-  background-color: rgba(0, 0, 139, 0.455);
-}
-.contact:hover {
-  background-color: darkgrey;
-  color: black;
-}
-.career :hover {
-  background-color: rgba(0, 128, 0, 0.6);
-  color: white;
-} */

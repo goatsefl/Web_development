@@ -1,3 +1,6 @@
+<!-- This is bootstrap, which is the most powerful framework of css, which contains multiple
+pre-defined keywords with powerful actions for UI designers. -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +12,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/CSS/BootStrap/app.css" />
+    <link rel="stylesheet" href="app.css" />
     <title>BootStrap_Basics</title>
   </head>
   <body>
@@ -18,16 +21,22 @@
        used only for any changes to be made within the webpage, there are a lot of pre-written css
        to avoid writing the same for every other property and ease of understanding design of the webpage. -->
       <h1 class="display-1">Placeholder</h1>
-      <h1 class="display-4">Buttons</h1>
-      <div class="btn btn-primary">Hallelujah</div>
+      <div class="display-4">Buttons<sup class="badge text-bg-primary badge-pill">9</sup></div><br>
+      <div class="btn btn-primary">Hallelujah <span class ="badge text-bg-secondary">99+</span></div>
       <div class="btn btn-warning">Hallelujah</div>
       <div class="btn btn-secondary">Hallelujah</div>
       <div class="btn btn-outline-warning">Hallelujah</div>
       <div class="btn btn-outline-info">Hallelujah</div>
-      <div class="btn btn-outline-primary">Hallelujah</div>
+      <div class="btn btn-outline-primary">Hallelujah</div><br>
+      <h3>Button Groups</h3>
+      <div class="btn-group" role="group">
+        <button class="btn btn-warning">Holla</button>
+        <button class="btn btn-warning">Holla</button>
+        <button class="btn btn-warning">Holla</button><br></div>
       <div class="display-4">TypoGraphy</div>
-      <div class="blockquote">
-        <p>
+      <blockquote class="blockquote text-center">
+        <div class="text-bg-secondary p-3">
+        <p class="lead">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
           consequatur accusamus cumque explicabo eaque ex molestias laudantium,
           consectetur eius, rerum fugiat facilis unde sint. Consequuntur quidem
@@ -36,6 +45,17 @@
           at. Fuga eligendi esse alias. Quas officiis necessitatibus labore,
           nostrum sunt illum? Magnam cum repellendus eos dolorem impedit!
         </p>
+        <footer class="blockquote-footer">Mr.Holoroma</footer>
+      </blockquote>
+      </div>  
+      <h3>Alerts</h3>
+      <div class="alert alert-danger">
+        <h5 class="alert-heading">This is the time boysssss</h5>
+        This is an alert for alerts.
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
     </div>
     <!-- <script

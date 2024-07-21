@@ -24,25 +24,82 @@
 			<a href="#" class="navbar-brand" id="color">CANDY</a>
 			<button
 				class="navbar-toggler"
-				type="button"
 				data-toggle="collapse"
 				data-target="#navbarNav"
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
 			>
-				<span class="navbar-toggler-icon"></span>
+				<span class="navbar-toggler-icon">
+					<svg
+						class="option-toggle"
+						fill="turquoise"
+						height="35px"
+						width="35px"
+						version="1.1"
+						id="Capa_1"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 460.054 460.054"
+						xml:space="preserve"
+					>
+						<g>
+							<g>
+								<path
+									d="M40.003,69.679C17.914,69.679,0,87.592,0,109.697c0,22.089,17.914,39.987,40.003,39.987
+			c22.089,0,40.003-17.898,40.003-39.987C80.006,87.592,62.092,69.679,40.003,69.679z"
+								/>
+							</g>
+							<g>
+								<path
+									d="M40.003,190.032C17.914,190.032,0,207.93,0,230.035c0,22.089,17.914,40.002,40.003,40.002
+			c22.089,0,40.003-17.913,40.003-40.002C80.006,207.93,62.092,190.032,40.003,190.032z"
+								/>
+							</g>
+							<g>
+								<path
+									d="M40.003,310.37C17.914,310.37,0,328.283,0,350.372c0,22.089,17.914,40.003,40.003,40.003
+			c22.089,0,40.003-17.914,40.003-40.003C80.006,328.283,62.092,310.37,40.003,310.37z"
+								/>
+							</g>
+							<g>
+								<path
+									d="M429.973,79.601H145.419c-16.611,0-30.081,13.47-30.081,30.096c0,16.612,13.469,30.081,30.081,30.081h284.554
+			c16.61,0,30.081-13.469,30.081-30.081C460.054,93.071,446.583,79.601,429.973,79.601z"
+								/>
+							</g>
+							<g>
+								<path
+									d="M429.973,199.939H145.419c-16.611,0-30.081,13.469-30.081,30.096c0,16.612,13.469,30.081,30.081,30.081h284.554
+			c16.61,0,30.081-13.469,30.081-30.081C460.054,213.408,446.583,199.939,429.973,199.939z"
+								/>
+							</g>
+							<g>
+								<path
+									d="M429.973,320.291H145.419c-16.611,0-30.081,13.469-30.081,30.081c0,16.611,13.469,30.08,30.081,30.08h284.554
+			c16.61,0,30.081-13.469,30.081-30.08C460.054,333.759,446.583,320.291,429.973,320.291z"
+								/>
+							</g>
+						</g>
+					</svg>
+				</span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home </a>
+						<a class="nav-link nav-item text-primary" id="nav-link" href="Home"
+							>Home
+						</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Shops</a>
+						<a class="nav-link nav-item text-primary" id="nav-link" href="Shops"
+							>Shops</a
+						>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Contact</a>
+						<a
+							class="nav-link nav-item text-primary"
+							id="nav-link"
+							href="Contact"
+							>Contact</a
+						>
 					</li>
 				</ul>
 			</div>
@@ -78,43 +135,6 @@
 				</div>
 				<div class="col-lg-6">
 					<div class="container">
-						<svg
-							class="candy"
-							width="100"
-							height="100"
-							viewBox="0 0 200 200"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<!-- Wrapper -->
-							<rect
-								x="60"
-								y="80"
-								width="80"
-								height="40"
-								rx="10"
-								ry="10"
-								fill="#40E0D0"
-								stroke="#30B2A4"
-								stroke-width="4"
-							/>
-							<!-- Wrapper stripes -->
-							<rect x="70" y="80" width="10" height="40" fill="#fff" />
-							<rect x="120" y="80" width="10" height="40" fill="#fff" />
-							<!-- Left twist -->
-							<path
-								d="M60 80 Q50 70 40 80 Q30 90 40 100 Q30 110 40 120 Q50 130 60 120"
-								fill="#40E0D0"
-								stroke="#30B2A4"
-								stroke-width="4"
-							/>
-							<!-- Right twist -->
-							<path
-								d="M140 80 Q150 70 160 80 Q170 90 160 100 Q170 110 160 120 Q150 130 140 120"
-								fill="#40E0D0"
-								stroke="#30B2A4"
-								stroke-width="4"
-							/>
-						</svg>
 						<p class="section-2">
 							They are ambrosia for the tongue, a celestial bouquet of sweetness
 							that dances on the breeze. Each bite, a hymn sung by sugar, a
@@ -354,7 +374,7 @@
 			</div>
 		</section>
 		<section>
-			<h1 class="display-3">SHOPS</h1>
+			<h1 class="display-3" id="shops-flex">SHOPS</h1>
 			<div
 				id="carouselExampleCaptions"
 				class="carousel slide"
@@ -368,7 +388,7 @@
 					></li>
 					<li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
 					<li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-					<li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+					<!-- <li data-target="#carouselExampleCaptions" data-slide-to="3"></li> -->
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
@@ -377,12 +397,12 @@
 							<h5>ODISHA, BHUBANESHWAR</h5>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<!-- <div class="carousel-item">
 						<img src="MAHARASHTRA.png" class="d-block w-100" alt="..." />
 						<div class="carousel-caption d-none d-md-block">
 							<h5>MAHARASHTRA, MUMBAI</h5>
 						</div>
-					</div>
+					</div> -->
 					<div class="carousel-item">
 						<img src="SIKKIM.png" class="d-block w-100" alt="..." />
 						<div class="carousel-caption d-none d-md-block">

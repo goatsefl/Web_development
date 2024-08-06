@@ -29,4 +29,4 @@
 
 // String methods : Powerful properties that can be used to make changes to strings like, uppercase,lowercase,repeat,trim and etc.
 
-// Eg : .trim(), toUpperCase().
+// Eg : "anyString".trim(), "anyString".toUpperCase(), "anyString".toLowerCase()

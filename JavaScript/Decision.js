@@ -179,3 +179,27 @@ let isUserActive = false;
 if (!isUserActive) {
 	console.log("User is inactive");
 }
+
+// Switch Statement
+// A switch statement provides a cleaner alternative to multiple if-else statements when you need to compare a single expression against multiple possible values.
+
+let day = "Sunday";
+
+switch (day) {
+	case "Monday":
+		console.log("Start of the week");
+		break;
+	case "Friday":
+	case "Saturday":
+		console.log("Weekend");
+		break;
+	default:
+		console.log("Weekday");
+}
+
+/*
+The switch statement evaluates the day variable.
+If day is "Monday", the first case executes and prints "Start of the week".
+If day is "Friday" or "Saturday", the second case executes and prints "Weekend".
+If none of the cases match, the default case executes and prints "Weekday".
+*/

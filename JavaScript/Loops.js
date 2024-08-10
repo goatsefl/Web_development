@@ -53,3 +53,58 @@ for (let i = 0; i < stones.length; i++) {
 		console.log(stones[j] + "\n");
 	}
 }
+// for of : same as for loop, doesn't require index.
+
+// Syntax :for (variable of iterables) Note : cannot be used for objects, as they're not iterables.
+
+// EG :
+
+const bag = [
+	"capsicum",
+	"okra",
+	"onion",
+	"potato",
+	"spinach",
+	"mustard",
+	"cauliflower",
+];
+
+for (let items of bag) {
+	console.log(items);
+}
+
+// Multi-Dimensional usage :
+
+bag = [
+	["capsicum", "okra", "onion", "potato", "spinach", "mustard", "cauliflower"],
+	["pencil", "sharpener", "eraser"],
+];
+
+for (let purchase of bag) {
+	for (let item of purchase) {
+		console.log(item);
+	}
+}
+
+// For in : Used to loop through values in objects.
+
+// Syntax : for(values in keys)
+
+// EG :
+
+const percent = {
+	Alice: 85,
+	Bob: 67,
+	Charlie: 92,
+	David: 78,
+	Emily: 54,
+	Frank: 95,
+	Grace: 42,
+	Henry: 71,
+	Isabella: 89,
+	Jack: 63,
+};
+
+for (let values in percent) {
+	console.log(percent[values]);
+}

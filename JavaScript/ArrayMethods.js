@@ -36,7 +36,7 @@ const fullNames = [
 ];
 
 const firstNames = fullNames.map(
-	(elements, index, fullNames) => `${fullNames[index].first}`
+	(index, fullNames) => `${fullNames[index].first}`
 );
 firstNames.forEach((names) =>
 	console.log(`First name of harry Potter characters ${names}`)
@@ -114,4 +114,44 @@ const usernames = [
 
 const otherWorldly = () => usernames.filter((elements) => elements.length <= 8);
 
-// some() : An array method tests returns a boolean and used to test if some of the elements pass the test.
+// some() : An array method returns true if any element passes the test.
+
+// Eg :
+
+const odd = [3, 5, 7, 9, 11, 12, 13, 15];
+const isOdd = odd.some((x) => x % 2 === 0);
+
+console.log(isOdd); // returns true
+
+const isStrictlyEven = (arr) => arr.every((x) => x % 2 === 0);
+
+console.log(isStrictlyEven(odd)); // Output : false
+
+// reduce() : Executes a reducer function on each element of the array, returning a single value.
+
+// Syntax : randomArray.reduce(accumulator,currentValue,InitialValue) => (accumulator+currentValue);
+
+// accumulator: Accumulates the result of the reducer function and is updated with each iteration.
+// currentValue: The current element being processed in the array.
+// initialValue (optional): The value to use as the first argument to the first call of the callback function. If not provided, reduce() uses the first element of the array as the accumulator and starts with the second element.
+
+//  It's a bit confusing at start, but, the accumulation happens at every step, where the index value is also stored to the accumulator.
+
+/* Eg : [1,3,4,5,6,7,9] = 
+
+1. CurrentValue = 1 : Accumulator = 3;  
+2. CurrentValue = 4 : Accumulator = 4;  
+3. CurrentValue = 5 : Accumulator = 8;  
+4. CurrentValue = 6 : Accumulator = 13;  
+5. CurrentValue = 9 : Accumulator = 19;
+6. Accumulator = prev(CurrentValue + Accumulator) = 27
+*/
+
+const addition = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10];
+
+const tally = (arr) => arr.reduce((x, y) => x + y, 200);
+
+console.log(tally(addition));
+
+// MOST IMPORTANTLY when TRYING TO USE ARROW FUNCTIONS IN OBJECTS, Scope them under regular function to avoid undefined values.
+// As Arrow functions follow Lexical Scoping.

@@ -1,5 +1,6 @@
 // In this we select various objects in DOM.
 
+//
 // getElementById , getElementsByTagName, getElementsByClassName
 
 // When you type console.dir(document), you will be able to see the object document containing all the properties and the attributes.
@@ -129,3 +130,26 @@ attr.getAttribute("title");
 attr.setAttribute("href", "google.com");
 
 // href = 'google.com' in simple words.
+
+const h1 = document.querySelector("h1");
+// style will print all the properties that are applicable for the tag h1, here we have assigned it to h1 object.
+console.log(h1.style);
+
+// Output : all the css properties will be listed, applied one's will be encapsulated under string quotations, else, they will be empty strings.
+
+h1.style.fontWeight = "300";
+
+// All the properties of css when accessed using style using dot notation will be camel-cased.
+
+// To get the information of styled components we can do this :
+
+// window.getComputedStyle(takes an element not a string).css_property to check the information of that element.
+console.log(window.getComputedStyle(h1).color);
+
+const h2 = document.querySelector("h2");
+
+h2.setAttribute("class", "purple");
+
+let currentClass = h2.getAttribute("class");
+
+console.log(h2.getAttribute("class"));

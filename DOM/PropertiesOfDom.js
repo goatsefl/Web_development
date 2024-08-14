@@ -44,3 +44,18 @@ console.log(newElement.children); // Output Explanation : In an array like itera
 // Actual Output : [a](It has one element. We can use indexing it to access that element.)
 
 console.log(newElement.children[0]); // Output : Displays the actual HTML code of the child tag.
+
+const imgElement = document.querySelector(".square");
+
+console.log(imgElement.childElementCount); // Output : 0 childElementCount provides the count of all children under the element.
+console.log(imgElement.childNodes); // Output : NodeList[] (Empty Data-Structure which is iterable like array, but don't have map,reduce and filter.)
+
+/* previousSibling and nextSibling are properties of an element that allow you to navigate through the DOM tree by accessing the preceding or succeeding sibling element, respectively.*/
+
+console.log(imgElement.previousSibling);
+console.log(imgElement.nextSibling);
+// Output :
+// #text |> (collapsed format, if expanded in console, it will show various properties of the element.)
+
+imgElement.previousElementSibling; // Points to p tag, if no sibling element, it will return null.
+imgElement.nextElementSibling; // Points to img tag.

@@ -1,0 +1,10 @@
+
+Q) What is DOM? 
+
+
+*) DOM stands for Document Object Model. 
+*) It is a programming interface for web documents. 
+*) It represents the structure of a document (like an HTML page) as a tree of objects,
+*) where each object corresponds to a part of the document, such as an element, attribute, or text content. 
+*) The DOM allows JavaScript to interact with and manipulate the content, structure, and style of a webpage dynamically.
+

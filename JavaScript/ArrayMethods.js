@@ -87,7 +87,7 @@ setTimeout(() => console.log("I'm gonna appear a bit delayed."), 3000);
 // Syntax : same as setTimeout()
 // EG :
 
-const count = 5;
+let count = 5;
 setInterval(() => {
 	if (count > 0) {
 		console.log("I'm gonna appear a every 3 seconds");

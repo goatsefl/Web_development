@@ -122,4 +122,11 @@ window.addEventListener("keydown", function (e) {
 
 // Form Events : The form eventObject properties that are useful while submitting and collecting data.
 
-//preventDefault() : Stops the default behavior of the form to not redirect to a new source provided in action.
+//element.preventDefault() : Stops the default behavior of the form to not redirect to a new source provided in action.
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", function (event) {
+	event.preventDefault();
+	console.log("Thanks for not redirecting"); // Thanks for not redirecting
+});

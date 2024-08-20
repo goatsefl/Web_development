@@ -39,49 +39,110 @@
 // Promise is an object which provides, whether an event was successful or not by presenting a value.
 // Syntax :
 
-const myPromise = (url) => {
+// const myPromise = (url) => {
+// 	return new Promise((resolve, reject) => {
+// 		const delay = Math.floor(Math.random() * 5000) + 500;
+// 		setTimeout(() => {
+// 			if (delay < 4500) {
+// 				resolve("Connection Successful");
+// 			} else {
+// 				reject("Connection Failed");
+// 			}
+// 		}, delay);
+// 	});
+// };
+// const noCallback = myPromise("amazon.com")
+// 	.then((data) => {
+// 		console.log(`Main Page`);
+// 		console.log(data);
+// 		return myPromise("amazon.com/page1");
+// 	})
+// 	.then((data) => {
+// 		console.log(`Currently in Page 1`);
+// 		console.log(data);
+// 		return myPromise("amazon.com/page2");
+// 	})
+// 	.then((data) => {
+// 		console.log(`Currently in Page 2`);
+// 		console.log(data);
+// 		return myPromise("amazon.com/page3");
+// 	})
+// 	.then((data) => {
+// 		console.log(`Currently in Page 3`);
+// 		console.log(data);
+// 		return myPromise("amazon.com/page4");
+// 	})
+// 	.then((data) => {
+// 		console.log(`Currently in Page 4`);
+// 		console.log(data);
+// 		return myPromise("amazon.com/page5");
+// 	})
+// 	.then((data) => {
+// 		console.log(`Last Page Loaded Successfully :) `);
+// 		console.log(data);
+// 	})
+// 	.catch((err) => {
+// 		console.log(`Your requested does not exist!!!`);
+// 		console.log(err);
+// 	});
+
+// Creating New Promise:
+
+const newURL = (url) => {
 	return new Promise((resolve, reject) => {
-		const delay = Math.floor(Math.random() * 5000) + 500;
+		const delay = Math.random();
 		setTimeout(() => {
-			if (delay < 4500) {
-				resolve("Connection Successful");
+			if (delay < 0.75) {
+				resolve();
 			} else {
-				reject("Connection Failed");
+				reject();
 			}
-		}, delay);
+		}, 1000);
 	});
 };
-const noCallback = myPromise("amazon.com")
-	.then((data) => {
-		console.log(`Main Page`);
-		console.log(data);
-		return myPromise("amazon.com/page1");
-	})
-	.then((data) => {
-		console.log(`Currently in Page 1`);
-		console.log(data);
-		return myPromise("amazon.com/page2");
-	})
-	.then((data) => {
-		console.log(`Currently in Page 2`);
-		console.log(data);
-		return myPromise("amazon.com/page3");
-	})
-	.then((data) => {
-		console.log(`Currently in Page 3`);
-		console.log(data);
-		return myPromise("amazon.com/page4");
-	})
-	.then((data) => {
-		console.log(`Currently in Page 4`);
-		console.log(data);
-		return myPromise("amazon.com/page5");
-	})
-	.then((data) => {
-		console.log(`Last Page Loaded Successfully :) `);
-		console.log(data);
-	})
-	.catch((err) => {
-		console.log(`Your requested does not exist!!!`);
-		console.log(err);
+
+function randomColors() {
+	const first = Math.floor(Math.random() * 256);
+	const second = Math.floor(Math.random() * 256);
+	const third = Math.floor(Math.random() * 256);
+	const alpha = Math.random();
+	return `rgba(${first},${second},${third},${alpha})`;
+}
+
+const newColorChange = (delayInThousands) => {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (Math.random() < 0.75) {
+				document.body.style.backgroundColor = randomColors();
+				resolve();
+			} else {
+				document.body.style.backgroundColor = `rgba(1,1,1,1)`;
+				reject("Delay was more than .75");
+			}
+		}, delayInThousands);
+	});
+};
+
+newColorChange(1000)
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.then(() => newColorChange(1000))
+	.catch((data) => {
+		console.log("Color will be black because", data);
 	});

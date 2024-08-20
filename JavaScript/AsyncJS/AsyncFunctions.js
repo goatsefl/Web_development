@@ -45,12 +45,50 @@ const newAsync = async () => console.log("Hello");
 // if we do return, then it will be full-filled and not undefined.
 
 const anotherAsync = async () => {
+	// throw "I'm using throw as a reject";
 	return "I'm the real promise that is full-filled"; //
 	// ^^ This is the same as "resolve('I'm the real promise that is full-filled');".
 };
 
 // We can use .then() and pass in details.
 
-anotherAsync().then((data) => {
-	console.log(`Here is the data : ${data}`);
-});
+anotherAsync()
+	.then((data) => {
+		console.log(`Here is the data : ${data}`);
+	})
+	.catch((err) => {
+		console.log(`Not working: ${err}`);
+	});
+
+// The return value of anotherAsync() will be passed on to ${data}.
+
+anotherAsync();
+
+// Output for anotherAsync():
+
+// Promise {<fulfilled>: "I'm the real promise that is full-filled"}
+// [[Prototype]]: Promise
+// [[PromiseState]]:"fulfilled"
+// [[PromiseResult]]:"I'm the real promise that is full-filled"
+
+// To see how to use catch we can throw an error by using "throw" or "throw new Error()".
+// For all the reasons, the above methods will work but, also, if there is a syntax error, that will also be taken care as reject.
+
+// Simple login example using async.
+
+const login = async (user, pass) => {
+	if (!user && !pass) throw new Error("Type the UserName and Password");
+	else if (!user && pass) throw new Error("Empty UserName detected");
+	else if (user && !pass) throw new Error("Empty Password detected");
+	else {
+		return "Enjoy the Services";
+	}
+};
+
+login("kjk", "")
+	.then((data) => {
+		console.log(`Logged in Successfully : ${data}`);
+	})
+	.catch((err) => {
+		console.log("Type in correct credentials : ", err);
+	});

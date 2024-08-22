@@ -191,4 +191,5 @@ p::first-line {
 /* selection inside the paragraph when selected elements inside the paragraph will provide visual queue to be orangered. */
 p::selection {
     background-color: orangered;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }

@@ -70,3 +70,7 @@ TRACE: Echoes the request back to the client.
 
 // syntax ? => start , key:value[appending more key:values can be chained by using &]
 
+// EXAMPLE : youtube.com/search?home=credentials&frontPage=vaSsdFwq654ewwQweRzx8zbZ
+
+// In the above example the searching started after "?" inclusion of key.
+

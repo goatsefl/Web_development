@@ -130,3 +130,35 @@ jButton.textContent = "NewDadJoke";
 jButton.addEventListener('click', () => {
     newApi();
 })
+
+
+// Axios Parameters:
+// url(string):
+
+// The URL to which the GET request is made.
+//     Example: "https://api.example.com/data"
+// config(optional, object):
+
+// An optional configuration object that allows you to customize the request.It can include various options like headers, query parameters, timeouts, etc.
+// Common config options:
+// params(object):
+// An object containing query parameters to be sent with the request.
+//     Example: { params: { id: 123, name: 'Alice' } } results in ? id = 123 & name=Alice being appended to the URL.
+//         headers(object):
+// Custom headers to be sent with the request.
+//     Example: { headers: { Authorization: 'Bearer token' } }
+// timeout(number):
+// Specifies the number of milliseconds before the request times out.
+//     Example: { timeout: 5000 } (5 seconds)
+// responseType(string):
+// Indicates the type of data that the server will respond with.Can be 'json', 'text', 'blob', 'arraybuffer', etc.
+//     Example: { responseType: 'json' }
+// auth(object):
+// Basic authentication credentials.
+//     Example: { auth: { username: 'username', password: 'password' } }
+// paramsSerializer(function):
+// A function to customize the way the params are serialized.
+//     Example: { paramsSerializer: params => Qs.stringify(params, { arrayFormat: 'brackets' }) }
+// baseURL(string):
+// A base URL that will be prepended to url unless url is an absolute URL.
+//     Example: { baseURL: 'https://api.example.com' }

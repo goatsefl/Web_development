@@ -112,3 +112,21 @@ const getPlanet = async (no) => {
     }
 }
 getPlanet(7); // change the number and keep testing if different planets exist, start from 1, IDK the number of planets, but, you can test it out by commenting other parts of the code.
+
+
+
+// Instead of Using a hoppscotch with help of axios, we can send in headers to axios and then extract the api's data.
+
+const newHeader = document.querySelector('h2');
+const newApi = async () => {
+    const axiosHeader = { headers: { Accept: 'application/json' } };// this line will directly select the Headers List Object and send in our key and value to use the api.
+    const dadJoke = await axios.get("https://icanhazdadjoke.com/", axiosHeader);
+    newHeader.textContent = dadJoke.data.joke;
+}
+
+const jButton = document.querySelector('button');
+jButton.textContent = "NewDadJoke";
+
+jButton.addEventListener('click', () => {
+    newApi();
+})

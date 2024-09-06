@@ -43,3 +43,32 @@ bikeObject.ride();
 // The difference in myObject.drive() and bikeObject.ride() is memory usage. Whenever a new instance of car is created, it will have the drive method in the constructor function.
 // So, for every Car object will have 2 instances created, instead every bike object will have only 1 instance and have shared reference to prototype property of bike. 
 // For this reason, we use prototypes, by saving memory.
+
+// So, String and Array are objects, and they have their own prototype properties, which hold predefined properties like, toUpperCase() and many more.
+
+// To have a custom prototype method for String or Array, we can do it by using Array.prototype.(functionName/propertyName).
+// Example :
+
+Array.prototype.randomNess = () => {
+    const randomness = "All the randomness in the world ";
+    console.log(randomness);
+}
+
+
+[1, 2, 3, 4, 5].randomNess();
+//Output : All the randomness in the world
+
+
+// Another example :
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.greet = function () {
+    console.log("Hello, my name is " + this.name);
+};
+
+const john = new Person("John", 30);
+john.greet(); // Output: Hello, my name is John

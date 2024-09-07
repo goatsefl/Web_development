@@ -72,3 +72,27 @@ Person.prototype.greet = function () {
 
 const john = new Person("John", 30);
 john.greet(); // Output: Hello, my name is John
+
+
+// This is how prototypes work and we can override other pre-existing function for each.
+
+// __proto__ is the reference to the prototype, where as the Person.prototype is the template object.
+
+// Factory function : function creates and returns an object
+// All the objects have the same recipe whenever created, and we can use it without "new keyword".
+
+// Example : 
+
+function factoryFunction(first, second) {
+    return {
+        firstName: first,
+        secondName: second
+    }
+}
+
+const person1 = factoryFunction('Snakeer', `Singh`);
+
+console.log(person1.firstName);
+console.log(person1.secondName);
+
+

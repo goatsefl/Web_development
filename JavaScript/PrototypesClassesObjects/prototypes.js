@@ -73,6 +73,9 @@ Person.prototype.greet = function () {
 const john = new Person("John", 30);
 john.greet(); // Output: Hello, my name is John
 
+const bobby = new Person("Bobby", 45);
+
+console.log(john.greet === bobby.greet)
 
 // This is how prototypes work and we can override other pre-existing function for each.
 
@@ -94,5 +97,3 @@ const person1 = factoryFunction('Snakeer', `Singh`);
 
 console.log(person1.firstName);
 console.log(person1.secondName);
-
-

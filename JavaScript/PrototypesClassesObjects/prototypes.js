@@ -97,3 +97,25 @@ const person1 = factoryFunction('Snakeer', `Singh`);
 
 console.log(person1.firstName);
 console.log(person1.secondName);
+
+
+// class : These are the same as function constructors but, classes doesn't require the user to use prototype notation to create methods inside the object.
+
+// Syntax : class A(firstName,secondName){
+//              constructor(){} } [This is a must in every class, by default you have to add a constructor function].
+
+
+class RandomPerson {
+    constructor() {
+        console.log(`Constructor called for RandomPerson`)
+    }
+    randomNumber() {
+        console.log(Math.floor(Math.random() * 10000));
+    }
+}
+
+const firstObject = new RandomPerson();
+firstObject.randomNumber();
+
+// output : Constructor called for RandomPerson
+// 3412

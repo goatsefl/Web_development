@@ -106,8 +106,9 @@ console.log(person1.secondName);
 
 
 class RandomPerson {
-    constructor() {
+    constructor(name) {
         console.log(`Constructor called for RandomPerson`)
+        this.name = name;
     }
     randomNumber() {
         console.log(Math.floor(Math.random() * 10000));
@@ -117,5 +118,18 @@ class RandomPerson {
 const firstObject = new RandomPerson();
 firstObject.randomNumber();
 
-// output : Constructor called for RandomPerson
+// Output : Constructor called for RandomPerson [randomNumber is added directly to the __proto__, that makes us not use the ObjectName.prototype.methodName()]
 // 3412
+
+class Person extends RandomPerson { // Inheritance, where RandomPerson is the parent of person. It's a bad example but, just for the understanding of the usage.
+    constructor(name, relation) {
+        super(name);// super will make sure to call the parent constructor and instances you want from the parent to be sent through the constructor.
+        this.relation = relation;
+    }
+    // This constructor() can also have it's own default variables that can be used, this.relation = relation.
+    sleep() {
+        console.log(`My school ${this.relation} ${super.name} is sleeping zzz`);
+    }
+}
+const anotherPerson = new Person("Garry", "Friend");
+anotherPerson.sleep();

@@ -10,3 +10,4 @@ const { cube, square } = require('./tutorial');
 console.log(cube(10) + square(20));
 
 // Output = 1400
+// 

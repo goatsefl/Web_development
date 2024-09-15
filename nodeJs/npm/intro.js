@@ -51,5 +51,4 @@
 
 // While installing the same package in different machine, package.json might provide version ranges and package-lock.json will provide exact version.
 
-// By that definition, it's more comprehensive in its nature. It's recommended not to manually change the package-lock.json without prior knowledge.
-
+// By that definition, it's more comprehensive in its nature. It's recommended not to manually change the package-lock.json without prior knowledge of the contents inside.

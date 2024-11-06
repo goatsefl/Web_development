@@ -1,0 +1,15 @@
+{
+  "type": "module",
+  "name": "languageGuesser",
+  "version": "2.0.0",
+  "description": "",
+  "main": "guesser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "franc": "^6.2.0",
+    "langs": "^2.0.0"
+  }
+}

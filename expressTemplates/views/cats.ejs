@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<%- include('subtemplates/head') %>
+		<title>Cats</title>
+	</head>
+	<body>
+		<%- include('subtemplates/navbar') %>
+		<div class="container">
+			<h1>CATS</h1>
+			<ul>
+				<% for (let cat of cats) { %>
+				<li><%=cat%></li>
+				<% } %>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<%- include('/subtemplates/head') %>
+		<title>Welcome Home</title>
 	</head>
 	<body>
-		<h1>Welcome to Webpage <%= 0-5 %></h1>
-		<p>
-			Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem saepe
-			et tempore ea nisi accusantium, repellat repellendus dolore! Laudantium
-			architecto maxime accusantium magnam libero voluptate illo quam
-			recusandae. Cumque, aut? Consectetur repudiandae dolor labore cumque nobis
-			quod nostrum distinctio. Amet soluta quisquam tempora incidunt facilis
-			officiis labore dolorum perspiciatis reprehenderit eveniet, quidem laborum
-			suscipit asperiores tenetur accusamus sapiente quia accusantium. Libero
-			excepturi qui autem assumenda minus alias doloribus. Provident, cumque
-			corporis! Voluptatum possimus accusamus voluptates, cumque earum quos
-			molestiae inventore placeat velit, delectus, deleniti enim aperiam fugit
-			quisquam vero fugiat.
-		</p>
+		<%- include(subtemplates/navbar) %>
+		<div class="container">
+			<h1>Welcome to Webpage <%= 0-5 %></h1>
+			<p>
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
+				saepe et tempore ea nisi accusantium, repellat repellendus dolore!
+				Laudantium architecto maxime accusantium magnam libero voluptate illo
+				quam recusandae. Cumque, aut? Consectetur repudiandae dolor labore
+				cumque nobis quod nostrum distinctio. Amet soluta quisquam tempora
+				incidunt facilis officiis labore dolorum perspiciatis reprehenderit
+				eveniet, quidem laborum suscipit asperiores tenetur accusamus sapiente
+				quia accusantium. Libero excepturi qui autem assumenda minus alias
+				doloribus. Provident, cumque corporis! Voluptatum possimus accusamus
+				voluptates, cumque earum quos molestiae inventore placeat velit,
+				delectus, deleniti enim aperiam fugit quisquam vero fugiat.
+			</p>
+		</div>
 	</body>
 </html>

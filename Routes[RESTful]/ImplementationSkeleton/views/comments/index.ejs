@@ -9,7 +9,21 @@
 		<h2>Comments</h2>
 		<ul>
 			<% for(let comment of comments){ %>
-			<li><%= comment.comment %> - <b><%= comment.name %></b></li>
+			<li>
+				<%= comment.comment %> ~<b><%= comment.name %></b>
+				<a href="/comments/<%=comment.id%>">Details</a>
+				<a
+					href="/comments/<%=comment.id%>/edit"
+					style="
+						font-family: sans-serif;
+						text-decoration: none;
+						color: green;
+						font-weight: 700;
+						text-transform: uppercase;
+					"
+					>Edit</a
+				>
+			</li>
 			<%}%>
 		</ul>
 		<section>

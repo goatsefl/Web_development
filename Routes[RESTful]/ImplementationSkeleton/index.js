@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path')
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuid } = require('uuid');
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
@@ -29,27 +29,27 @@ app.listen(3000, () => {
 
 const comments = [
     {
-        id: uuidv4(),
+        id: uuid(),
         name: "Sophia",
         comment: "I love how smooth this process is"
     },
     {
-        id: uuidv4(),
+        id: uuid(),
         name: "Aarav",
         comment: `Can't believe I missed this feature, it's so helpful!`
     },
     {
-        id: uuidv4(),
+        id: uuid(),
         name: "Emily",
         comment: "This really made my day easier!"
     },
     {
-        id: uuidv4(),
+        id: uuid(),
         name: "Liam",
         comment: "Such a great way to improve efficiency"
     },
     {
-        id: uuidv4(),
+        id: uuid(),
         name: "Ananya",
         comment: 'I was wondering how to do this, thanks for the tip!'
     }
@@ -63,10 +63,52 @@ app.get('/comments/new', (req, res) => {
     res.render('comments/new')
 })
 
+// You cannot set headers after it's send to the client.
+// The above statement means that you cannot do this :
+/*  As it only does the send once.
+{res.send()}
+{res.redirect()}
+*/
 app.post('/comments', (req, res) => {
-    res.send("This works")
-    console.log(req.body)
     const { name, comment } = req.body;
-    console.log(name, comment)
-    comments.push({ id: uuidv4(), name, comment })
+    const id = uuid();
+    comments.push({ id, name, comment })
+    res.redirect('/comments')
+})
+
+app.get('/comments/:id', (req, res) => {
+    const { id } = req.params;
+    console.log(typeof id)
+    const comment = comments.find(c => c.id == id);
+    if (comment) {
+        res.render('comments/show', { comment })
+    }
+    else {
+        res.render('comments/invalidID', { id })
+    }
+})
+
+app.get('/comments/:id/edit', (req, res) => {
+    const { id } = req.params;
+    console.log(id)
+    for (let comment of comments) {
+        if (comment.id == id) {
+            res.render('comments/edit', { comment })
+        }
+    }
+    res.render('comments/invalidID', { id })
+})
+
+app.post('/comments/:id', (req, res) => {
+    const { editComment } = req.body;
+    const { id } = req.params;
+    const isExist = comments.find(c => c.id == id);
+    if (isExist) {
+        for (let comment of comments) {
+            if (comment.id == id) {
+                comment.comment = editComment;
+                res.redirect('/comments');
+            }
+        }
+    }
 })

@@ -78,8 +78,17 @@ app.post('/comments', (req, res) => {
 
 app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
-    console.log(typeof id)
-    const comment = comments.find(c => c.id == id);
+    console.log(id);
+    const comment = (() => {
+        for (let comment of comments) {
+            if (comment.id == id) {
+                console.log(comment.id)
+                return comment
+            }
+        }
+    })()
+    // const comment = comments.find(c => c.id == id);
+    console.log(comment)
     if (comment) {
         res.render('comments/show', { comment })
     }
@@ -90,19 +99,19 @@ app.get('/comments/:id', (req, res) => {
 
 app.get('/comments/:id/edit', (req, res) => {
     const { id } = req.params;
-    console.log(id)
+    const doesIdExist = comments.find(c => { if (c.id == id) { return true } })
     for (let comment of comments) {
         if (comment.id == id) {
             res.render('comments/edit', { comment })
         }
     }
-    res.render('comments/invalidID', { id })
 })
 
 app.post('/comments/:id', (req, res) => {
     const { editComment } = req.body;
     const { id } = req.params;
     const isExist = comments.find(c => c.id == id);
+    console.log(isExist)
     if (isExist) {
         for (let comment of comments) {
             if (comment.id == id) {

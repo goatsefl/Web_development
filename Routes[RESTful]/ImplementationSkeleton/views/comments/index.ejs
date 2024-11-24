@@ -22,7 +22,10 @@
 						text-transform: uppercase;
 					"
 					>Edit</a
-				>
+				><br />
+				<form method="POST" action="/comments/<%=comment.id%>?_method=DELETE">
+					<button>DELETE</button>
+				</form>
 			</li>
 			<%}%>
 		</ul>

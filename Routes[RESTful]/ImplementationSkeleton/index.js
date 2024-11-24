@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const { v4: uuid } = require('uuid');
+var methodOverride = require('method-override') // Treats this piece of code to be a method.
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
@@ -21,13 +22,12 @@ app.post('/tacos', (req, res) => {
 app.listen(3000, () => {
     console.log("ON PORT 3000")
 })
-
-
+app.use(methodOverride('_method'))
 
 
 // ENTIRE IMPLEMENTATION OF COMMENTS 
 
-const comments = [
+var comments = [
     {
         id: uuid(),
         name: "Sophia",
@@ -78,17 +78,14 @@ app.post('/comments', (req, res) => {
 
 app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
-    console.log(id);
     const comment = (() => {
         for (let comment of comments) {
             if (comment.id == id) {
-                console.log(comment.id)
                 return comment
             }
         }
     })()
     // const comment = comments.find(c => c.id == id);
-    console.log(comment)
     if (comment) {
         res.render('comments/show', { comment })
     }
@@ -99,19 +96,21 @@ app.get('/comments/:id', (req, res) => {
 
 app.get('/comments/:id/edit', (req, res) => {
     const { id } = req.params;
-    const doesIdExist = comments.find(c => { if (c.id == id) { return true } })
     for (let comment of comments) {
         if (comment.id == id) {
             res.render('comments/edit', { comment })
         }
     }
 })
-
+app.delete('/comments/:id', (req, res) => { // One of the delete requests.
+    const { id } = req.params
+    comments = comments.filter(c => c.id !== id);
+    res.redirect('/comments');
+})
 app.post('/comments/:id', (req, res) => {
     const { editComment } = req.body;
     const { id } = req.params;
     const isExist = comments.find(c => c.id == id);
-    console.log(isExist)
     if (isExist) {
         for (let comment of comments) {
             if (comment.id == id) {

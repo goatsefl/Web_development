@@ -17,3 +17,5 @@ const p = new Product({
 // p.save().then(p => console.log(p))
 
 const seedProducts = [{}, {}, {}, {}, {}, {}]
+
+Product.insertMany()

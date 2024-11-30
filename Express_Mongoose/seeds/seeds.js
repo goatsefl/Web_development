@@ -16,6 +16,8 @@ const p = new Product({
 })
 // p.save().then(p => console.log(p))
 
-const seedProducts = [{}, {}, {}, {}, {}, {}]
-
-Product.insertMany()
+const seedProducts = [{ name: 'Onion', price: 1.99, category: 'vegetable' },
+{ name: 'Potato', price: 2.99, category: 'vegetable' }, { name: 'Cheese', price: 4.99, category: 'dairy' }, { name: 'Strawberry', price: 9.99, category: 'fruit' }, { name: 'Garlic', price: 7.99, category: 'vegetable' }, { name: 'Mango', price: 16.99, category: 'fruit' }
+]
+// insertMany will decline every insertion if the schema is not followed by any individual object.
+Product.insertMany(seedProducts).then(s => console.log(s)).catch(e => console.log(e))

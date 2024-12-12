@@ -23,7 +23,8 @@ app.set('view engine', 'ejs')
 
 app.get('/products', async (req, res) => {
     const { category } = req.query
-    if (category) {
+    console.log(category)
+    if (category.category) {
         const products = await Product.find({ category })
         res.render('products/index', { products, category })
     } else {
@@ -31,7 +32,6 @@ app.get('/products', async (req, res) => {
         res.render('products/index', { products, category: 'All' })
     }
 })
-
 app.get('/products/new', (req, res) => {
     res.render('products/new')
 })
